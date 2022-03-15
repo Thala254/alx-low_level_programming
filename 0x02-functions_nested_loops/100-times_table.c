@@ -1,5 +1,5 @@
 #include "main.h"
-  
+
 /**
  * print_times_table - prints the times table for n.
  * @n: The multiplication table requested.
@@ -7,43 +7,42 @@
  */
 void print_times_table(int n)
 {
-	int a, b, c, d, e, f;
+	int i, j, res;
 
-	if (n >= 0 && n < 15)
+	if (!(n > 15 || n < 0))
 	{
-		for (a = 0; a <=  n; a++)
+		for (i = 0; i <= n; i++)
 		{
-			for (b = 0; b <= n; b++)
+			for (j = 0; j <= n; j++)
 			{
-				c = a * b; d = c / 100; e = (c /  10) % 10;
-				f = (c % 100) % 10;
-				if (b == 0)
+				res = (i * j);
+				if (j != 0)
 				{
-					_putchar('0');
+					_putchar(',');
+					_putchar(' ');
 				}
-				else if (c < 10)
-				{
-					_putchar(' '); _putchar(' ');
-					_putchar('0' + f);
-				}
-				else if (c < 100)
+				if (res < 10 && j != 0)
 				{
 					_putchar(' ');
-					_putchar('0' + e); _putchar('0' + f);
+					_putchar(' ');
+					_putchar((res % 10) + '0');
+				}
+				else if (res >= 10 && res < 100)
+				{
+					_putchar(' ');
+					_putchar((res / 10) + '0');
+					_putchar((res % 10) + '0');
+				}
+				else if (res >= 100 && j != 0)
+				{
+					_putchar((res / 100) + '0');
+					_putchar((res / 10) % 10 + '0');
+					_putchar((res % 10) + '0');
 				}
 				else
-				{
-					_putchar('0' + d);
-					_putchar('0' + e);
-					_putchar('0' + f);
-				}
-				if (b < n)
-				{
-					_putchar(','); _putchar(' ');
-				}
-				else
-					_putchar('\n');
+					_putchar((res % 10) + '0');
 			}
+			_putchar('\n');
 		}
 	}
 }
