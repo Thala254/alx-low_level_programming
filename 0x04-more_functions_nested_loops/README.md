@@ -1,4 +1,4 @@
-0x04-more_functions_nested_loops
+# 0x04-more_functions_nested_loops
 More advanced assignments to learn functions and nested loops
 
 ## Description of Files
@@ -36,3 +36,7 @@ Prints a triangle to the standard output. Looks like this, if the input is 10:<b
  #########
 ##########
 ```
+<h6>100-prime_factor.c</h6>
+Finds and prints the largest prime factor of the number 612852475143 followed by a new line.
+<h6>101-print_number.c</h6>
+Prints an integer, accepts an integer.
