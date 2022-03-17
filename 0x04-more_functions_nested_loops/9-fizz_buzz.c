@@ -3,7 +3,7 @@
 /**
  * main - prints numbers from 1 to 100.
  *
- * Return: 0 
+ * Return: 0
  */
 
 int main(void)
@@ -20,9 +20,9 @@ int main(void)
 			printf("Buzz");
 		else
 			printf("%d", i);
-		if (i != 100)
-			putchar(' ');
+		if (i < 100)
+			printf(" ");
 	}
-	putchar('\n');
+	printf("\n");
 	return (0);
 }
