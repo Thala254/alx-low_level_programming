@@ -21,13 +21,13 @@ Changes all lowercase letters of a string to uppercase
 Capitalizes all words of a string 
 <h6>7-leet.c</h6>
 Encodes a string into 1337 (leetspeek) 
-<h6>8-rot13.c</h6>
+<h6>100-rot13.c</h6>
 Encodes a string with ROT-13.
-<h6>100-print_number.c</h6>
+<h6>101-print_number.c</h6>
 Prints an integer, with restrictions.
-<h6>101-magic.c</h6>
+<h6>102-magic.c</h6>
 Add one line to the provided code to make it print 98.
-<h6>102-infinite_add.c</h6>
+<h6>103-infinite_add.c</h6>
 Adds two numbers into a buffer of size n.	
-<h6>103-print_buffer.c</h6>
+<h6>104-print_buffer.c</h6>
 Prints a buffer.
