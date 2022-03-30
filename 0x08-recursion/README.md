@@ -15,7 +15,7 @@ Write a function that prints a string, followed by a new line.
 
 - Prototype: `void _puts_recursion(char *s);`
 
-**Solution:** [0-puts_recursion.c](https://github.com/Thala254/alx-low_level_programming/tree/main/0x08-recursion/0-puts_recursion.c)
+**Solution:** [0-puts_recursion.c](0-puts_recursion.c)
 
 ```
 $ julien@ubuntu:~/0x08. Recursion$ cat 0-main.c
@@ -43,7 +43,7 @@ Write a function that prints a string in reverse.
 
 - Prototype: `void _print_rev_recursion(char *s);`
 
-**Solution:** [1-print_rev_recursion.c](https://github.com/Thala254/alx-low_level_programming/tree/main/0x08-recursion/1-print_rev_recursion.c)
+**Solution:** [1-print_rev_recursion.c](1-print_rev_recursion.c)
 
 ```
 $ julien@ubuntu:~/0x08. Recursion$ cat 1-main.c
@@ -71,7 +71,7 @@ Write a function that returns the length of a string.
 
 - Prototype: `int _strlen_recursion(char *s);`
 
-**Solution:** [2-strlen_recursion.c](https://github.com/Thala254/alx-low_level_programming/tree/main/0x08-recursion/2-strlen_recursion.c)
+**Solution:** [2-strlen_recursion.c](2-strlen_recursion.c)
 
 ```
 $ julien@ubuntu:~/0x08. Recursion$ cat 2-main.c
@@ -105,7 +105,7 @@ Write a function that returns the factorial of a given number.
 - If `n` is lower than `0`, the function should return `-1` to indicate an error
 - Factorial of `0` is `1`
 
-**Solution:** [3-factorial.c](https://github.com/Thala254/alx-low_level_programming/tree/main/0x08-recursion/3-factorial.c)
+**Solution:** [3-factorial.c](3-factorial.c)
 
 ```
 $ julien@ubuntu:~/0x08. Recursion$ cat 3-main.c
@@ -147,7 +147,7 @@ Write a function that returns the value of x raised to the power of y.
 - Prototype: `int _pow_recursion(int x, int y);`
 - If `y` is lower than `0`, the function should return `-1`
 
-**Solution:** [4-pow_recursion.c](https://github.com/Thala254/alx-low_level_programming/tree/main/0x08-recursion/4-pow_recursion.c)
+**Solution:** [4-pow_recursion.c](4-pow_recursion.c)
 
 ```
 $ julien@ubuntu:~/0x08. Recursion$ cat 4-main.c
@@ -195,7 +195,7 @@ Write a function that returns the natural square root of a number.
 - Prototype: `int _sqrt_recursion(int n);`
 - If `n` does not have a natural square root, the function should return `-1`
 
-**Solution:** [5-sqrt_recursion.c](https://github.com/Thala254/alx-low_level_programming/tree/main/0x08-recursion/5-sqrt_recursion.c)
+**Solution:** [5-sqrt_recursion.c](5-sqrt_recursion.c)
 
 ```
 $ julien@ubuntu:~/0x08. Recursion$ cat 5-main.c
@@ -242,7 +242,7 @@ Write a function that returns `1` if the input integer is a [prime number](https
 
 - Prototype: `int is_prime_number(int n);`
 
-**Solution:** [6-is_prime_number.c](https://github.com/Thala254/alx-low_level_programming/tree/main/0x08-recursion/6-is_prime_number.c)
+**Solution:** [6-is_prime_number.c](6-is_prime_number.c)
 
 ```
 $ julien@ubuntu:~/0x08. Recursion$ cat 6-main.c
@@ -296,7 +296,7 @@ Write a function that returns `1` if a string is a palindrome and `0` if not.
 - Prototype: `int is_palindrome(char *s);`
 - An empty string is a palindrome
 
-**Solution:** [100-is_palindrome.c](https://github.com/Thala254/alx-low_level_programming/tree/main/0x08-recursion/100-is_palindrome.c)
+**Solution:** [100-is_palindrome.c](100-is_palindrome.c)
 
 ```
 $ julien@ubuntu:~/0x08. Recursion$ cat 7-main.c
@@ -339,7 +339,7 @@ Write a function that compares two strings and returns 1 if the strings can be c
 - `s2` can contain the special character `*`.
 - The special char `*` can replace any string (including an empty string)
 
-**Solution:** [101-wildcmp.c](https://github.com/Thala254/alx-low_level_programming/tree/main/0x08-recursion/101-wildcmp.c)
+**Solution:** [101-wildcmp.c](101-wildcmp.c)
 
 ```
 julien@ubuntu:~/0x08. Recursion$ cat 101-main.c
