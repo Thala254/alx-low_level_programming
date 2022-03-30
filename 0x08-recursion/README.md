@@ -9,7 +9,7 @@
 
 # Tasks
 
-## She locked away a secret, deep inside herself, something she once knew to be true... but chose to forget
+## 0.She locked away a secret, deep inside herself, something she once knew to be true... but chose to forget
 
 Write a function that prints a string, followed by a new line.
 
@@ -37,7 +37,7 @@ Betty Holberton
 $ julien@ubuntu:~/0x08. Recursion$
 ```
 
-## Why is it so important to dream? Because, in my dreams we are together
+## 1.Why is it so important to dream? Because, in my dreams we are together
 
 Write a function that prints a string in reverse.
 
@@ -65,7 +65,7 @@ reklaW notloC
 $ julien@ubuntu:~/0x08. Recursion$
 ```
 
-## Dreams feel real while we're in them. It's only when we wake up that we realize something was actually strange
+## 2.Dreams feel real while we're in them. It's only when we wake up that we realize something was actually strange
 
 Write a function that returns the length of a string.
 
@@ -97,7 +97,7 @@ $ julien@ubuntu:~/0x08. Recursion$ ./2-strlen_recursion
 $ julien@ubuntu:~/0x08. Recursion$
 ```
 
-## You mustn't be afraid to dream a little bigger, darling
+## 3.You mustn't be afraid to dream a little bigger, darling
 
 Write a function that returns the factorial of a given number.
 
@@ -140,7 +140,7 @@ $ julien@ubuntu:~/0x08. Recursion$ ./3-factorial
 $ julien@ubuntu:~/0x08. Recursion$
 ```
 
-## Once an idea has taken hold of the brain it's almost impossible to eradicate
+## 4.Once an idea has taken hold of the brain it's almost impossible to eradicate
 
 Write a function that returns the value of x raised to the power of y.
 
@@ -188,7 +188,7 @@ $ julien@ubuntu:~/0x08. Recursion$ ./4-pow
 $ julien@ubuntu:~/0x08. Recursion$
 ```
 
-## Your subconscious is looking for the dreamer
+## 5.Your subconscious is looking for the dreamer
 
 Write a function that returns the natural square root of a number.
 
@@ -236,7 +236,7 @@ $ julien@ubuntu:~/0x08. Recursion$ ./5-sqrt
 $ julien@ubuntu:~/0x08. Recursion$
 ```
 
-## Inception. Is it possible?
+## 6.Inception. Is it possible?
 
 Write a function that returns `1` if the input integer is a [prime number](https://en.wikipedia.org/wiki/Prime_number), otherwise return `0`.
 
@@ -287,4 +287,113 @@ $ julien@ubuntu:~/0x08. Recursion$ ./6-prime
 1
 1
 $ julien@ubuntu:~/0x08. Recursion$
+```
+
+## 7.They say we only use a fraction of our brain's true potential. Now that's when we're awake. When we're asleep, we can do almost anything
+
+Write a function that returns `1` if a string is a palindrome and `0` if not.
+
+- Prototype: `int is_palindrome(char *s);`
+- An empty string is a palindrome
+
+**Solution:** [100-is_palindrome.c](https://github.com/Thala254/alx-low_level_programming/tree/main/0x08-recursion/100-is_palindrome.c)
+
+```
+$ julien@ubuntu:~/0x08. Recursion$ cat 7-main.c
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int r;
+
+    r = is_palindrome("level");
+    printf("%d\n", r);
+    r = is_palindrome("redder");
+    printf("%d\n", r);
+    r = is_palindrome("test");
+    printf("%d\n", r);
+    r = is_palindrome("step on no pets");
+    printf("%d\n", r);
+    return (0);
+}
+$ julien@ubuntu:~/0x08. Recursion$ gcc -Wall -pedantic -Werror -Wextra 100-main.c 100-is_palindrome.c -o 100-palindrome
+$ julien@ubuntu:~/0x08. Recursion$ ./100-palindrome
+1
+1
+0
+1
+$ julien@ubuntu:~/0x08. Recursion$
+```
+
+## 8.Inception. Now, before you bother telling me it's impossible...
+
+Write a function that compares two strings and returns 1 if the strings can be considered identical, otherwise return 0.
+
+- Prototype: `int wildcmp(char *s1, char *s2);`
+- `s2` can contain the special character `*`.
+- The special char `*` can replace any string (including an empty string)
+
+**Solution:** [101-wildcmp.c](https://github.com/Thala254/alx-low_level_programming/tree/main/0x08-recursion/101-wildcmp.c)
+
+```
+julien@ubuntu:~/0x08. Recursion$ cat 101-main.c
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int r;
+
+    r = wildcmp("main.c", "*.c");
+    printf("%d\n", r);
+    r = wildcmp("main.c", "m*a*i*n*.*c*");
+    printf("%d\n", r);
+    r = wildcmp("main.c", "main.c");
+    printf("%d\n", r);
+    r = wildcmp("main.c", "m*c");
+    printf("%d\n", r);
+    r = wildcmp("main.c", "ma********************************c");
+    printf("%d\n", r);
+    r = wildcmp("main.c", "*");
+    printf("%d\n", r);
+    r = wildcmp("main.c", "***");
+    printf("%d\n", r);
+    r = wildcmp("main.c", "m.*c");
+    printf("%d\n", r);
+    r = wildcmp("main.c", "**.*c");
+    printf("%d\n", r);
+    r = wildcmp("main-main.c", "ma*in.c");
+    printf("%d\n", r);
+    r = wildcmp("main", "main*d");
+    printf("%d\n", r);
+    r = wildcmp("abc", "*b");
+    printf("%d\n", r);
+    return (0);
+}
+julien@ubuntu:~/0x08. Recursion$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 101-main.c 101-wildcmp.c -o 101-wildcmp
+julien@ubuntu:~/0x08. Recursion$ ./101-wildcmp
+1
+1
+1
+1
+1
+1
+1
+0
+1
+1
+0
+0
+julien@ubuntu:~/0x08. Recursion$
 ```
