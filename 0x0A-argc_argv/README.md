@@ -1,14 +1,16 @@
-# argc, argv
+# 0x09.C - argc, argv
 
-# Learning Objectives
+## Learning Objectives
 
 - How to use arguments passed to your program
 - What are two prototypes of `main` that you know of, and in which case do you use one or the other
 - How to use `__attribute__((unused))` or `(void)` to compile functions with unused variables or parameters
 
-# Tasks
+## Tasks
 
-## It ain't what they call you, it's what you answer to
+### Mandatory
+
+### 0.It ain't what they call you, it's what you answer to
 
 Write a program that prints its name, followed by a new line.
 
@@ -27,7 +29,7 @@ $ julien@ubuntu:~/0x0A. argc, argv$ ./mynewnameis
 $ julien@ubuntu:~/0x0A. argc, argv$
 ```
 
-## Silence is argument carried out by other means
+### 1.Silence is argument carried out by other means
 
 Write a program that prints the number of arguments passed into it.
 
@@ -48,7 +50,7 @@ $ julien@ubuntu:~/0x0A. argc, argv$ ./nargs hello, world
 $ julien@ubuntu:~/0x0A. argc, argv$
 ```
 
-## The best argument against democracy is a five-minute conversation with the average voter
+### 2.The best argument against democracy is a five-minute conversation with the average voter
 
 Write a program that prints all arguments it receives.
 
@@ -73,7 +75,7 @@ everything.
 $ julien@ubuntu:~/0x0A. argc, argv$
 ```
 
-## Neither irony nor sarcasm is argument
+### 3.Neither irony nor sarcasm is argument
 
 Write a program that multiplies two numbers.
 
@@ -98,7 +100,7 @@ Error
 $ julien@ubuntu:~/0x0A. argc, argv$
 ```
 
-## To infinity and beyond
+### 4.To infinity and beyond
 
 Write a program that adds positive numbers.
 
@@ -120,4 +122,34 @@ Error
 $ julien@ubuntu:~/0x0A. argc, argv$ ./add
 0
 $ julien@ubuntu:~/0x0A. argc, argv$
+```
+
+## Advanced
+
+### 5.Minimal Number of Coins for Change
+
+Write a program that prints the minimum number of coins to make change for an amount of money.
+
+- Usage: `./change cents`
+- where `cents` is the amount of cents you need to give back
+- if the number of arguments passed to your program is not exactly `1`, print `Error`, followed by a new line, and return `1`
+- you should use `atoi` to parse the parameter passed to your program
+- If the number passed as the argument is negative, print `0`, followed by a new line
+- You can use an unlimited number of coins of values 25, 10, 5, 2, and 1 cent
+
+**Solution:** [100-change.c](100-change.c)
+
+```
+julien@ubuntu:~/0x0A. argc, argv$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 100-change.c -o change
+julien@ubuntu:~/0x0A. argc, argv$ ./change
+Error
+julien@ubuntu:~/0x0A. argc, argv$ ./change 10
+1
+julien@ubuntu:~/0x0A. argc, argv$ ./change 100
+4
+julien@ubuntu:~/0x0A. argc, argv$ ./change 101
+5
+julien@ubuntu:~/0x0A. argc, argv$ ./change 13
+3
+julien@ubuntu:~/0x0A. argc, argv$
 ```
