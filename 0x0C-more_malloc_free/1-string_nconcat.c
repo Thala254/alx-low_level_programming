@@ -1,32 +1,25 @@
 #include <stdlib.h>
-
+#include <stdio.h>
 /**
- * string_nconcat - concatenates two strings
+ * string_nconcat - concatenate two strings up to n bytes.
  * @s1: source string
- * @s2: string to truncate upto n bytes
- * @n: bytes to truncate on s2
+ * @s2: string to truncate up to n bytes
+ * @n: number of bytes to truncate by
  * Return: pointer to new buffer
  */
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *p;
 	unsigned int s1count, s2count, sizeBuffer, i;
 
 	if (s1 == NULL)
-		s1count = 0;
-	else
-	{
-		for (s1count = 0; s1[s1count]; s1count++)
-			;
-	}
+		s1 = "";
 	if (s2 == NULL)
-		s2count = 0;
-	else
-	{
-		for (s2count = 0; s2[s2count]; s2count++)
-			;
-	}
+		s2 = "";
+	for (s1count = 0; s1[s1count]; s1count++)
+		;
+	for (s2count = 0; s2[s2count]; s2count++)
+		;
 	s2count > n ? (s2count = n) : (n = s2count);
 	sizeBuffer = s1count + s2count + 1;
 	p = malloc(sizeBuffer * sizeof(char));
