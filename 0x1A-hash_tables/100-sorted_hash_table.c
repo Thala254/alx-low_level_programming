@@ -1,5 +1,7 @@
 #include "hash_tables.h"
 
+void add_to_sorted_list(shash_table_t *table, shash_node_t *node);
+
 /**
  * shash_table_create - creates a sorted hash table
  * @size: hash table size
