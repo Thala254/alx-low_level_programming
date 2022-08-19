@@ -3,10 +3,11 @@
 5-island_perimeter
 """
 
+
 def island_perimeter(grid):
     """
-        Returns the perimeter of the island surrounded by water and described in grid
-        The Land is represented by 1 and the water is by 0.
+        Returns the perimeter of the island surrounded by water and described
+        in grid. The Land is represented by 1 and the water is by 0.
         Aguments:
             - grid: A matrix filled with 0, 1 representing a map.
     """
