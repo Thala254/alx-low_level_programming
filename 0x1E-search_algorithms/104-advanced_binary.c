@@ -36,7 +36,7 @@ int _advanced_binary(int *array, size_t lower, size_t upper, int value)
 		size_t mid = (upper + lower) / 2;
 
 		print_array(array, lower, upper);
-		if (array[mid] < value)	
+		if (array[mid] < value)
 			return (_advanced_binary(array, mid + 1, upper, value));
 		if (array[mid] > value)
 			return (_advanced_binary(array, lower, mid, value));
