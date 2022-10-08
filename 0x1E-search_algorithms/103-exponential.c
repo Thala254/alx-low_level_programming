@@ -1,98 +1,101 @@
 #include "search_algos.h"
 
-int binary_search_exp(int *array, size_t low, size_t high, int value);
-void print_array(int *array, int lower, int upper);
-int min(int a, int b);
+/**
+ * print_array - prints an array of integers
+ * @array: array to print
+ * @size: size of array
+ *
+ * return: void
+ */
+void print_array(int *array, size_t size)
+{
+	size_t i;
+
+	printf("Searching in array:");
+	for (i = 0; i < size; i++)
+	{
+		printf(" %d", array[i]);
+		if (i != size - 1)
+			printf(",");
+	}
+	printf("\n");
+}
+
+/**
+ * binary_search - searches for a value in a sorted array of integers using the
+ * Binary search algorithm
+ * @array: pointer to the first element of the array to search in
+ * @size: number of elements in array
+ * @value: value to search for
+ *
+ * Return: index where value is located, or -1 on failure
+ */
+int binary_search(int *array, size_t size, int value)
+{
+	size_t l, m, r;
+
+	if (array != NULL && size > 0)
+	{
+		l = 0;
+		r = size - 1;
+		print_array(array + l, r + 1 - l);
+		while (l < r)
+		{
+			m = (l + r) / 2;
+			if (array[m] < value)
+				l = m + 1;
+			else if (array[m] > value)
+				r = m;
+			else
+				return (m);
+			print_array(array + l, r + 1 - l);
+		}
+	}
+	return (-1);
+}
+
+/**
+ * minimum_value - finds the minimum of two values
+ * @a: first value to compare
+ * @b: second value to compare
+ *
+ * Return: The smaller of the two values, or a if equal
+ */
+size_t minimum_value(size_t a, size_t b)
+{
+	if (b < a)
+		return (b);
+	return (a);
+}
 
 /**
  * exponential_search - searches for a value in a sorted array of integers
  * using the Exponential search algorithm
- *
- * @array:  pointer to the first element of the array to search in
+ * @array: pointer to the first element of the array to search in
  * @size: number of elements in array
- * @value:  value to search for
+ * @value: value to search for
  *
- * Return: first index of value or -1 if NULL
+ * Return: first index where value is located, or -1 on failure
  */
 int exponential_search(int *array, size_t size, int value)
 {
-	size_t i, j = 0;
+	size_t bound = 1, low;
+	int r;
 
-	if (array && size)
+	if (array != NULL && size > 0)
 	{
-		if (array[0] == value)
-			return (0);
-		i = 1;
-		while (i < size && array[i] <= value)
+		while (bound < size && array[bound] < value)
 		{
-			printf("Value checked array[%lu] = [%d]\n", i, array[i]);
-			j = i;
-			i *= 2;
+			printf("Value checked array[%lu] = [%d]\n", bound, array[bound]);
+			bound *= 2;
 		}
-		if (size <= i)
-			i = size - 1;
-		printf("Value found between indexes [%lu] and [%lu]\n", j, i);
-		i += 1;
-		return (binary_search_exp(array, i / 2, min(i, size - 1), value));
+		low = bound / 2;
+		bound = minimum_value(size - 1, bound);
+		printf("Value found between indexes [%lu] and [%lu]\n", low, bound);
+		r = binary_search(array + low, bound + 1 - low, value);
+		if (r >= 0)
+			return (r + low);
 	}
 	return (-1);
 }
 
-/**
- * binary_search_exp - searches for a value in a sorted array using binary
- * search algorithm
- *
- * @array:  pointer to the first element of the array to search in
- * @low: lower boundary of array
- * @high: upper boundary of array
- * @value:  value to search for
- *
- * Return: first index of value or -1 if NULL
- */
-int binary_search_exp(int *array, size_t low, size_t high, int value)
-{
-	if (high >= low)
-	{
-		size_t mid = low + (high - low) / 2;
-
-		print_array(array, low, high);
-		if (array[mid] == value)
-			return (mid);
-		if (array[mid] > value)
-			return (binary_search_exp(array, low, mid - 1, value));
-		return (binary_search_exp(array, mid + 1, high, value));
-	}
-	return (-1);
-}
-
-/**
- * print_array - prints an array
- * @array: array to print
- * @lower: lower boundary of array
- * @upper: upper boundary of array
- * Return: void
- */
-void print_array(int *array, int lower, int upper)
-{
-	int i;
-
-	printf("Searching in array: ");
-	for (i = lower; i < upper; i++)
-		printf("%d, ", array[i]);
-	printf("%d\n", array[upper]);
-}
-
-/**
- * min - finds the minimum value between two arguments supplied
- *
- * @a: first valu
- * @b: second value
- *
- * Return: minimum value
- */
-int min(int a, int b)
-{
-	if (b > a)
-		return (a);
-	return (b);
-}
