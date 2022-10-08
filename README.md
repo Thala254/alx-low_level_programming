@@ -93,6 +93,6 @@ Topics include:
 
 ## Credits
 
-Work is owned and maintained by Brian Kiprotich ([@brayan](https://twitter.com/lagatbrayan)).
+Work is owned and maintained by Brian Kiprotich ([@brayan](https://twitter.com/BrayanLagat)).
 
 Credits for group projects are displayed in the respective README.md files.
